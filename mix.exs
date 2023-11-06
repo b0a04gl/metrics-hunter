@@ -22,9 +22,11 @@ defmodule MetricsHunter.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:httpoison, "~> 1.6"},
+      {:httpoison, "~> 1.8"},
       {:gen_stage, "~> 1.0"},
-      {:mox, "~> 1.0"}
+      {:mox, "~> 1.0"},
+      {:poison, "~> 4.0"},
+      {:influxdb, "~> 0.2.1"}
     ]
   end
 end

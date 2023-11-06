@@ -8,7 +8,8 @@ defmodule MetricsHunter.Application do
     children = [
       MetricsHunter.Producer,
       Supervisor.child_spec(MetricsHunter.Consumer, id: :consumer_a),
-      Supervisor.child_spec(MetricsHunter.Consumer, id: :consumer_b)
+      Supervisor.child_spec(MetricsHunter.Consumer, id: :consumer_b),
+      # MetricsHunter.Myconnection
     ]
 
     opts = [strategy: :one_for_one, name: MetricsHunter.Supervisor]
